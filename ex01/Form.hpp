@@ -7,9 +7,9 @@ class Form
 {
 private:
     const std::string	_name;
-    bool				is_signed;
-	const unsigned int	grade_to_sign;
-	const unsigned int	grade_to_exec;
+    bool				_is_signed;
+	const unsigned int	_grade_to_sign;
+	const unsigned int	_grade_to_exec;
 public:
 	// Constructor with parameters
 	Form(std::string name, unsigned int grade_to_sign, unsigned int grade_to_exec);
