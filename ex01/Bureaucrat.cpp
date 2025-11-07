@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() {
     // Default constructor
@@ -56,7 +57,7 @@ void    Bureaucrat::signForm(Form &form) {
         std::cout << this->getName() << " signed " << form.getName() << std::endl;
     }
     catch (std::exception &e) {
-        std::cout << this->getName() << " couldn't sign " << form.getName() << " because " << e.what();
+        std::cout << this->getName() << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
     }
 }
   

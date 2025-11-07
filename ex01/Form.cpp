@@ -1,4 +1,5 @@
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(): _name("Default"), _is_signed(false), _grade_to_sign(150), _grade_to_exec(150) {
     // Default constructor
