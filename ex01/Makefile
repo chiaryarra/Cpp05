@@ -1,10 +1,10 @@
-NAME = megaphone
+NAME = forms
 
 CPP = c++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = Bureaucrat.cpp main.cpp
+SRCS = Bureaucrat.cpp main.cpp Form.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

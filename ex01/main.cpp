@@ -1,21 +1,9 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(void) {
-    try {    
-        Bureaucrat b1("Chiara", 0);
-        Bureaucrat b2("Henrique", 10);
-        Bureaucrat b3("Alessandro", 180);
-    }
-    catch (std::exception &e) {
-        std::cout << "Erro: " << e.what() << std::endl;
-    }
+    Bureaucrat b1("Chiara", 3);
+    Form f1("Arquivo teste", 10, 5);
 
-    try {
-        Bureaucrat b4("Chiara", 149);
-        b4.decrement();
-        b4.decrement();
-    }
-    catch (std::exception &e) {
-        std::cout << "Erro: " << e.what() << std::endl;
-    }
+    b1.signForm(f1);
 }
