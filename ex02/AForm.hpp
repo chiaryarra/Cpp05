@@ -33,14 +33,20 @@ public:
 		public:
 			const char* what() const throw();
 	};
+	class FormNotSignedException : public std::exception {
+		public:
+			const char* what() const throw();
+	};
 
 	// Getters
 	std::string 	getName(void) const;
 	bool			getIsSigned(void) const;
 	unsigned int	getGradeToSign(void) const;
 	unsigned int	getGradeToExec(void) const;
+	
 	// Member Functions
 	void	beSigned(const Bureaucrat &bureaucrat);
+	virtual void	execute(Bureaucrat const &executor) const = 0;
 };
 
 std::ostream& operator<<(std::ostream& out, const AForm& aform);
