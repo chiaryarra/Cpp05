@@ -1,7 +1,7 @@
 #include "RobotomyRequestForm.hpp"
 #include "Bureaucrat.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45), _target("default") {
+RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45), _target("Default") {
     std::cout << "RobotomyRequestForm default constructor called" << std::endl;
 }
 
@@ -27,7 +27,7 @@ RobotomyRequestForm::~RobotomyRequestForm () {
 void    RobotomyRequestForm::execute(const Bureaucrat &executor) const {
     if (this->getIsSigned() == false)
         throw RobotomyRequestForm::FormNotSignedException();
-    if (this->getGradeToExec() > executor.getGrade())
+    if (executor.getGrade() > this->getGradeToExec())
         throw RobotomyRequestForm::GradeTooLowException();
     std::cout << "* Drilling noises... BZZZZZZZZZT!! *" << std::endl;
     if (std::rand() % 2 == 0)

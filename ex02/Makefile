@@ -4,7 +4,7 @@ CPP = c++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = Bureaucrat.cpp main.cpp AForm.cpp ShrubberyCreationForm.cpp
+SRCS = Bureaucrat.cpp main.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentalPardonForm.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

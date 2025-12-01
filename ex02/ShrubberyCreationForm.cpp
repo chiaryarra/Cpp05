@@ -2,7 +2,7 @@
 #include "Bureaucrat.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137), _target("default") {
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137), _target("Default") {
     std::cout << "ShrubberyCreationForm default constructor called" << std::endl;
 }
 
