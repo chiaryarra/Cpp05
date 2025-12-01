@@ -22,7 +22,7 @@ public:
 	AForm();
 	AForm(const AForm &copy);
 	AForm& operator=(const AForm &copy);
-    ~AForm();
+    virtual ~AForm();
 
 	// Exception Classes
 	class GradeTooHighException : public std::exception {
