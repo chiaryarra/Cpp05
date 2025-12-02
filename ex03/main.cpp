@@ -2,20 +2,17 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentalPardonForm.hpp"
+#include "Intern.hpp"
 
 int main(void) {
 
+    std::srand(time(NULL));
     try {
+        Intern randomIntern;
         Bureaucrat burocrata("Chiara", 5);
-        ShrubberyCreationForm tree("arvores");
-        RobotomyRequestForm rob("Robô");
-        PresidentalPardonForm pardon("Chiara");
-        burocrata.signForm(tree);
-        burocrata.signForm(rob);
-        burocrata.signForm(pardon);
-        tree.execute(burocrata);
-        rob.execute(burocrata);
-        pardon.execute(burocrata);
+        AForm* arvore = randomIntern.makeForm("shrubbery creation", "arvore");
+        burocrata.signForm(*arvore);
+        burocrata.executeForm(*arvore);
     }
     catch(std::exception &e)
     {
