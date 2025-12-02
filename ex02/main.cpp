@@ -5,6 +5,7 @@
 
 int main(void) {
 
+    std::srand(time(NULL));
     try {
         Bureaucrat burocrata("Chiara", 5);
         ShrubberyCreationForm tree("arvores");
@@ -13,9 +14,9 @@ int main(void) {
         burocrata.signForm(tree);
         burocrata.signForm(rob);
         burocrata.signForm(pardon);
-        tree.execute(burocrata);
-        rob.execute(burocrata);
-        pardon.execute(burocrata);
+        burocrata.executeForm(tree);
+        burocrata.executeForm(rob);
+        burocrata.executeForm(pardon);
     }
     catch(std::exception &e)
     {
